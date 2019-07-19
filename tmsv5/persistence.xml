@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="qwe">
+		
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<!-- Entity classes -->
+		<!-- <class>com.cg.tms.entity.Employee</class> -->
+		<!-- <class>com.cg.tms.entity.Program</class> -->
+		<class>com.cg.tms.entity.Course</class>
+		<!-- <class>com.cg.tms.entity.TrainerSkill</class>
+		<class>com.cg.tms.entity.Center</class>
+		<class>com.cg.tms.entity.Student</class>
+		<class>com.cg.tms.entity.Address</class>
+		<class>com.cg.tms.entity.Roles</class> -->
+		<properties>
+			<!-- The JDBC driver of your database -->
+			<property name="javax.persistence.jdbc.driver"
+				value="oracle.jdbc.OracleDriver" />
+			<!-- The JDBC URL to the database instance -->
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:oracle:thin:@localhost:1521:xe" />
+			<!-- The database username -->
+			<property name="javax.persistence.jdbc.user" value="sys as sysdba" />
+			<!-- The database password -->
+			<property name="javax.persistence.jdbc.password"
+				value="system" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+
+		</properties>
+	</persistence-unit>
+</persistence>
